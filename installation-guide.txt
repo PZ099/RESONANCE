@@ -1,10 +1,10 @@
 RESONANCE 2.2.5 · PRISM / 棱镜 · 内测版（r5 小更新）
 
 官网：https://pz099.github.io/RESONANCE/
-推荐安装器：RESONANCE-2.2.5-Setup-r5.exe
-准确大小：292,553,624 字节（292.6 MB，十进制）
-SHA-256：EBFCC8849AD999424DC5FA3C46443B0A0C041FDFCD1339E250492EA58D19B504
-EXE 直链：https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup-r5.exe
+推荐安装器：RESONANCE-2.2.5-Setup-r6.exe
+准确大小：292,568,098 字节（292.6 MB，十进制）
+SHA-256：E47DCE0241F008E130F182BED5755AE97DB8C363A2B2F6CFE804CC97689DEC70
+EXE 直链：https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup-r6.exe
 
 本次安装器内含启动修复和音频来源修复，版本号仍为 2.2.5。
 来源列表自动刷新，改善 Edge、其他浏览器与播放器的来源发现；缺少歌名或歌手信息时，继续通过音频识曲和本机听写寻找线索。
@@ -18,7 +18,7 @@ EXE 直链：https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONAN
 
 已经安装完整 2.2.5
 1. 从应用或托盘中完全退出共振，关闭原安装向导。
-2. 运行 RESONANCE-2.2.5-Setup-r5.exe，选择“仅更新已安装程序”。
+2. 运行 RESONANCE-2.2.5-Setup-r6.exe，选择“仅更新已安装程序”。
 3. 本次修复已放在 EXE 内，不重新下载约 28 GB 基础数据或模型。
 4. 更新校验原文件并保留恢复备份；原有 API 密钥、内测资格、录音、设置、模型和历史版本保留。
    来源软件不支持暂停、切歌或进度控制时，对应控制仍会禁用；没有标题并不代表没有音频。
@@ -32,7 +32,7 @@ EXE 直链：https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONAN
 高级离线基础包
 原 RESONANCE-2.2.5-Offline.exe + Offline-1.bin 至 Offline-15.bin 共 16 个文件未改动。
 保留文件名，全部放在同一个文件夹，按同次发布的 SHA256SUMS.txt 校验，再运行 Offline.exe。
-离线基础包安装完成后，运行最新 RESONANCE-2.2.5-Setup-r5.exe → “仅更新已安装程序”，应用 r5 内嵌修复。
+离线基础包安装完成后，运行最新 RESONANCE-2.2.5-Setup-r6.exe → “仅更新已安装程序”，应用 r5 内嵌修复。
 原始完整 ZIP 也只是同一基础包：28,249,317,950 字节，SHA-256 为 92D03B8D80A8873DD24F1EAE8EA7870E1297908A34108C9D9195B012A9858FFB。
 ZIP 摘要不能用来校验 EXE 或 BIN。GitHub 自动生成的 Source code ZIP 不是安装包。
 
@@ -48,3 +48,22 @@ ZIP 摘要不能用来校验 EXE 或 BIN。GitHub 自动生成的 Source code ZI
 包内不包含作者或用户的 API Key、内测码、私钥、录音或个人设置。
 请独立备份内测代码，尤其在换电脑或清理用户数据前。更新与正常卸载保留共享模型及个人资料。
 当前内测包尚无商业代码签名；请核对来源和上面的准确摘要。各模型及第三方组件的原许可证随软件提供。
+
+
+完整离线安装文件（官网新增入口）
+
+下载地址：https://pz099.github.io/RESONANCE/#offline-download
+合计 28,531,914,706 字节（28.53 GB），共17项：Offline.exe、15个BIN及Setup-r5.exe。
+下载全部，保留文件名，放在同一文件夹；按 offline-download-SHA256SUMS.txt 校验。
+先运行 Offline.exe 安装基础包，再完全退出共振，运行 Setup-r5.exe，选择“仅更新已安装程序”。
+最新版本保留全部当前功能与模型，不影响正常使用。无需解压或手动拼接BIN。
+下载和安装会同时占用磁盘，请另外预留修复、备份和临时空间。缺少VC++运行库时应提前准备微软官方组件。
+文件采用GitHub分卷托管，不能提供一个28GB单文件；国内下载及所有机器全程断网安装尚未验证。
+
+
+自动获取完整包（推荐）
+
+官网下载区点击“下载完整包下载器”，手动打开OfflineDownload.exe。
+默认是只下载完整离线包，不安装；选磁盘或具体文件夹，再点击“下载完整离线包”。
+它会自动下载、校验并整理17个安装文件及说明、校验清单，结束后可打开文件夹。
+无需逐项点17个链接。网页不会自动运行EXE。下载缓存位置可选盘，不会移动已安装软件和共享模型。

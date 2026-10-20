@@ -4,7 +4,7 @@
 
 听你正在听的。让频谱、歌词、录制与本机 AI 留在同一个窗口，继续使用你喜欢的播放器或浏览器。
 
-**[共振官网](https://pz099.github.io/RESONANCE/)** · **[直接下载 Windows 安装器 · 292.6 MB](https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup-r5.exe)**
+**[共振官网](https://pz099.github.io/RESONANCE/)** · **[直接下载 Windows 安装器 · 292.6 MB](https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup-r6.exe)**
 
 安装器直接下载 EXE，内含启动和音频来源修复。首次仍需下载约 28.24 GB 完整数据，全部功能与本机模型保留。中国大陆网络速度与可用性尚未验证。
 
@@ -26,7 +26,7 @@
 
 ## 新装或仅更新
 
-首次安装：运行 RESONANCE-2.2.5-Setup-r5.exe，下载并校验完整基础数据，选择最新版本或全版本；原安装向导完成后，Setup 自动应用内嵌修复。
+首次安装：运行 RESONANCE-2.2.5-Setup-r6.exe，下载并校验完整基础数据，选择最新版本或全版本；原安装向导完成后，Setup 自动应用内嵌修复。
 
 已经装好完整 2.2.5：完全退出共振后，运行同一个 EXE，选择 **“仅更新已安装程序”**。无需重新下载模型或约 28 GB 基础数据，原有密钥、内测资格、录音、设置和历史版本保留。
 
@@ -39,19 +39,19 @@
 
 ## 安装器校验
 
-文件：RESONANCE-2.2.5-Setup-r5.exe  
-准确大小：**292,553,624 字节**（292.6 MB）  
+文件：RESONANCE-2.2.5-Setup-r6.exe  
+准确大小：**292,568,098 字节**（292.6 MB）  
 SHA-256：
 
 ~~~text
-EBFCC8849AD999424DC5FA3C46443B0A0C041FDFCD1339E250492EA58D19B504
+E47DCE0241F008E130F182BED5755AE97DB8C363A2B2F6CFE804CC97689DEC70
 ~~~
 
 此摘要仅适用于当前 r5 安装器。旧 Setup.exe、原 Offline.exe / 15 个 BIN 及完整 ZIP 均保持原样。
 
 ## 已有离线基础包
 
-原 Offline.exe 与全部 15 个 BIN 可继续用于基础安装。保留全部文件名并按同次发布的 SHA256SUMS.txt 核验。基础安装后仍需运行最新 RESONANCE-2.2.5-Setup-r5.exe，选择“仅更新已安装程序”，才能获得 r5 修复。
+原 Offline.exe 与全部 15 个 BIN 可继续用于基础安装。保留全部文件名并按同次发布的 SHA256SUMS.txt 核验。基础安装后仍需运行最新 RESONANCE-2.2.5-Setup-r6.exe，选择“仅更新已安装程序”，才能获得 r5 修复。
 
 GitHub 自动生成的 Source code ZIP 是本发布仓库文件，**不是软件安装包**。
 
@@ -67,3 +67,8 @@ GitHub 自动生成的 Source code ZIP 是本发布仓库文件，**不是软件
 
 
 官网已升级 Motion 视觉：三种色调的原创歌词演示、滚动与预览过渡、阅读进度、动效暂停，以及更完整的安装问答。演示只展示视觉效果，不会读取音频。软件和安装器版本仍为 2.2.5 r5。
+
+
+## r6：选盘与自动完整包
+
+[完整包自动下载器 · 292.6 MB](https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-OfflineDownload.exe) 默认只下载、不安装。打开后选磁盘并开始，自动获取约28.24GB基础数据，校验后将17个安装文件、说明和校验清单放到一起，不用逐项点下载。下载缓存可选盘，软件与共享模型仍使用当前Windows用户目录。

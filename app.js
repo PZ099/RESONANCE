@@ -65,7 +65,7 @@
     try {
       const candidate = new URL(installer.url);
       if (candidate.protocol === 'https:' && !candidate.username && !candidate.password &&
-          decodeURIComponent(candidate.pathname.split('/').pop()) === 'RESONANCE-2.2.5-Setup-r5.exe') directUrl = candidate;
+          decodeURIComponent(candidate.pathname.split('/').pop()) === 'RESONANCE-2.2.5-Setup-r6.exe') directUrl = candidate;
     } catch { /* Missing or invalid final file URL: keep the download disabled. */ }
 
     // A final URL alone must not enable a partially verified or placeholder release.
@@ -81,7 +81,7 @@
       const link = document.createElement('a');
       link.className = 'button button-dark download-button';
       link.href = directUrl.href;
-      link.download = 'RESONANCE-2.2.5-Setup-r5.exe';
+      link.download = 'RESONANCE-2.2.5-Setup-r6.exe';
       // No window.open or target=_blank: request the EXE directly in the current browsing context.
       // Cross-origin download behavior is ultimately controlled by the server response headers.
       link.setAttribute('aria-describedby', 'download-status');
@@ -91,7 +91,7 @@
       icon.textContent = '↓';
       link.append(icon);
       actions.append(link);
-      document.getElementById('download-status').textContent = '直接下载 EXE，内含启动与音频来源修复。首次安装仍下载约 28.24 GB 完整数据；已安装 2.2.5 可仅更新程序，无需重下模型。中国大陆网络尚未验证。';
+      document.getElementById('download-status').textContent = '直接下载 EXE，可选择下载磁盘，内含启动与音频来源修复。首次安装仍下载约 28.24 GB 完整数据；已安装 2.2.5 可仅更新程序，无需重下模型。中国大陆网络尚未验证。';
     }
   }
 
