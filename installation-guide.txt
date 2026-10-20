@@ -1,9 +1,15 @@
 RESONANCE · PRISM 2.2.5 内测版
 
-这是 Windows 正式安装程序，包含全部本地模型。分享时发送「RESONANCE-2.2.5-完整安装包.zip」一个完整文件。
+这是 Windows 正式安装程序，包含全部本地模型。可通过分卷安装文件或原始完整 ZIP 分发。
+
+分卷发布（如 GitHub Releases）：
+下载 RESONANCE-2.2.5-Offline.exe 和 RESONANCE-2.2.5-Offline-1.bin 至 RESONANCE-2.2.5-Offline-15.bin，全放在同一个文件夹，保留原文件名。
+从同一次发布下载 SHA256SUMS.txt，逐个校验 EXE 与全部 15 个 BIN。不能只下载 EXE，不要混用不同日期的分卷。
+GitHub 自动生成的 Source code (zip) / Source code (tar.gz) 是发布仓库源码，不是软件安装包。
+如果下载的是原始「RESONANCE-2.2.5-完整安装包.zip」，先完整解压。该 ZIP 的 SHA-256 只适用于 ZIP 本身，不适用于任何分卷。
 
 安装：
-1. 完整解压 ZIP。安装 EXE 和所有 BIN 分卷必须留在同一个文件夹。
+1. 下载齐分卷文件；若下载的是完整 ZIP，则先完整解压。安装 EXE 和全部 15 个 BIN 分卷必须留在同一个文件夹。
 2. 运行 RESONANCE-2.2.5-Offline.exe，不要直接在压缩包中运行。
 3. 在向导中选择：
    最新版本（推荐） — 31.11 GB：全部功能、全部本地模型，不影响使用；不安装历史程序。
