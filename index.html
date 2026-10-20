@@ -5,46 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="RESONANCE 共振，让声音被看见。监听正在播放的音乐，让频谱、歌词与本机 AI 在一个窗口相遇。2.2.5 PRISM 棱镜内测版，适用于 Windows。">
   <meta name="theme-color" content="#101713">
+  <meta name="color-scheme" content="dark light">
   <meta property="og:title" content="RESONANCE · 共振 — 让声音被看见">
   <meta property="og:description" content="频谱、歌词、本机 AI。一个属于正在播放的声音的窗口。">
   <meta property="og:type" content="website">
   <title>RESONANCE · 共振 — 让声音被看见</title>
   <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="stylesheet" href="styles.css">
-  <script src="release-config.js?v=2.2.5-setup2" defer></script>
-  <script src="app.js?v=2.2.5-setup2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261020-motion1">
+  <script src="release-config.js?v=20261020-motion1" defer></script>
+  <script src="app.js?v=20261020-motion1" defer></script>
+  <link rel="stylesheet" href="motion.css?v=20261020-motion1">
+  <script src="motion.js?v=20261020-motion1" defer></script>
   <noscript><style>.menu-toggle{display:none}@media(max-width:580px){.site-header{height:auto;min-height:76px;flex-wrap:wrap;padding-top:17px;padding-bottom:17px;gap:15px}#site-nav{position:static;display:flex;width:100%;padding:0;border:0;box-shadow:none;flex-direction:row;flex-wrap:wrap;gap:12px;background:none}#site-nav>a:not(.nav-download){display:block;padding:6px 0;font-size:11px;border:0}#site-nav .nav-download{margin:0;padding:7px 10px;gap:12px}}</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
     <a class="brand" href="#" aria-label="RESONANCE 共振首页"><span class="brand-mark" aria-hidden="true">R<span>/</span></span><span>RESONANCE<span class="brand-cn">共振</span></span></a>
-    <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" type="button"><span>菜单</span><span class="menu-lines" aria-hidden="true"></span></button>
-    <nav id="site-nav" aria-label="主导航">
-      <a href="#experience">体验</a><a href="#features">功能</a><a href="#guide">安装指南</a><a href="#updates">更新</a>
-      <a class="nav-download" href="#download">获取共振 <span aria-hidden="true">↗</span></a>
-    </nav>
+    <nav id="site-nav" aria-label="主导航"><a href="#experience">体验</a><a href="#features">功能</a><a href="#guide">安装指南</a><a href="#updates">更新</a><a class="nav-download" href="#download">获取共振 <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-controls"><button id="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">暂停动效</span></button><button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" type="button"><span>菜单</span><span class="menu-lines" aria-hidden="true"></span></button></div>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
   </header>
 
   <main id="main">
     <section class="hero section-shell" aria-labelledby="hero-title">
-      <div class="hero-topline"><span class="eyebrow"><i class="status-dot" aria-hidden="true"></i> WINDOWS · 本机 AI 音乐伴侣</span><span class="release-pill">2.2.5 <span>PRISM / 内测版</span></span></div>
+      <div class="hero-topline"><span class="edition-label">THE LISTENING COMPANION / 001</span><span class="eyebrow"><i class="status-dot" aria-hidden="true"></i> WINDOWS · 本机 AI 音乐伴侣</span><span class="release-pill">2.2.5 <span>PRISM / 棱镜内测</span><span class="pill-arrow" aria-hidden="true">↗</span></span></div>
       <div class="hero-composition">
         <div class="hero-copy">
           <h1 id="hero-title">让声音<br><span>被看见。</span></h1>
-          <p class="hero-description">听你正在听的。<br>把频谱、歌词和音乐故事，<br class="mobile-break">留在同一个窗口。</p>
+          <p class="hero-overline">你的声音，有了自己的空间。</p><p class="hero-description">听你正在听的。<br>把频谱、歌词和音乐故事，<br class="mobile-break">留在同一个窗口。</p>
           <div class="hero-actions"><a class="button button-lime" href="#download">获取 Windows 版 <span aria-hidden="true">↗</span></a><a class="text-link" href="#experience">先看一眼 <span aria-hidden="true">↓</span></a></div>
           <p class="hero-note">继续使用你喜欢的音乐软件。共振，陪你一起听。</p>
         </div>
-        <div class="sound-art" aria-hidden="true">
+        <div class="sound-art" aria-hidden="true"><div class="art-halo"></div><div class="art-grid"></div><span class="art-coordinate coordinate-top">R / 2.2.5</span><span class="art-coordinate coordinate-bottom">PRISM — 棱镜</span>
           <div class="sound-orbit orbit-one"></div><div class="sound-orbit orbit-two"></div><div class="sound-orbit orbit-three"></div>
           <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
           <div class="sound-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="art-caption"><span>SOUND, IN SIGHT.</span><span>20 Hz — 20 kHz</span></div>
-          <div class="art-word">RESONATE.</div>
+          <div class="art-caption"><span>SOUND, IN SIGHT.</span><span>视觉波形 · MOTION STUDY</span></div>
+          <div class="art-word">A LITTLE CLOSER TO THE MUSIC.</div><div class="art-ticket"><span class="ticket-icon" aria-hidden="true">≋</span><div><b>随声而动</b><span>频谱 / 歌词 / 本机 AI</span></div><span class="ticket-dot"></span></div>
         </div>
       </div>
       <div class="hero-bottom"><span>听见旋律。看见情绪。</span><span>LOCAL FIRST <b> / </b> HUMAN ALWAYS</span><a href="#experience" aria-label="向下查看产品体验">↓</a></div>
+    </section>
+
+    <div class="source-strip section-shell"><span>继续使用你喜欢的</span><div><span>浏览器</span><i aria-hidden="true">/</i><span>音乐软件</span><i aria-hidden="true">/</i><span>本地视频</span></div><a href="#listening-flow">共振如何聆听 <span aria-hidden="true">↗</span></a></div>
+
+    <section id="sound-preview" class="sound-preview section-shell section-space" aria-labelledby="sound-preview-title">
+      <div class="section-heading"><div><p class="eyebrow">PLAY WITH THE FEELING</p><h2 id="sound-preview-title">先感受，<br>再按下播放。</h2></div><p class="section-description">频谱与文字，同一种呼吸。<br>换一种色调，看看音乐的另一面。</p></div>
+      <div class="listening-scene" data-palette="prism">
+        <div class="scene-top"><span><i class="status-dot" aria-hidden="true"></i>RESONANCE / VISUAL SESSION</span><span>原创文字 · 视觉演示</span></div>
+        <div class="scene-body"><div class="scene-cover" aria-hidden="true"><span>R.</span><i></i><b>PRISM<br>IN MOTION</b></div><div class="scene-lyrics" aria-label="原创演示歌词，不播放或录制音频"><p class="is-current">把喧嚣留在远处</p><p>让旋律经过此刻</p><p>每一次轻轻共振</p><p>都留下自己的颜色</p></div><div class="scene-spectrum" aria-hidden="true"><i style="--n:0;--level:23%"></i><i style="--n:1;--level:38%"></i><i style="--n:2;--level:62%"></i><i style="--n:3;--level:44%"></i><i style="--n:4;--level:78%"></i><i style="--n:5;--level:96%"></i><i style="--n:6;--level:60%"></i><i style="--n:7;--level:45%"></i><i style="--n:8;--level:82%"></i><i style="--n:9;--level:100%"></i><i style="--n:10;--level:70%"></i><i style="--n:11;--level:54%"></i><i style="--n:12;--level:38%"></i><i style="--n:13;--level:68%"></i><i style="--n:14;--level:90%"></i><i style="--n:15;--level:73%"></i><i style="--n:16;--level:100%"></i><i style="--n:17;--level:57%"></i><i style="--n:18;--level:86%"></i><i style="--n:19;--level:63%"></i><i style="--n:20;--level:38%"></i><i style="--n:21;--level:75%"></i><i style="--n:22;--level:53%"></i><i style="--n:23;--level:84%"></i><i style="--n:24;--level:44%"></i><i style="--n:25;--level:61%"></i><i style="--n:26;--level:32%"></i><i style="--n:27;--level:48%"></i><i style="--n:28;--level:68%"></i><i style="--n:29;--level:39%"></i><i style="--n:30;--level:27%"></i><i style="--n:31;--level:18%"></i></div></div>
+        <div class="scene-bottom"><div class="palette-picker" role="group" hidden aria-label="演示色调"><button class="palette-choice active" data-palette="prism" type="button" aria-pressed="true"><i></i>棱镜</button><button class="palette-choice" data-palette="dusk" type="button" aria-pressed="false"><i></i>暮光</button><button class="palette-choice" data-palette="ice" type="button" aria-pressed="false"><i></i>冰川</button></div><span class="scene-caption">只展示视觉效果，不会读取你的音频。</span></div>
+      </div>
+      <noscript><p class="small-note">当前为静态预览；启用 JavaScript 后可以切换演示色调。</p></noscript>
     </section>
 
     <section id="experience" class="experience section-shell section-space" aria-labelledby="experience-title">
@@ -68,7 +81,7 @@
           <figcaption><span class="preview-index">03 / 03</span><h3>小一点。<br>陪伴多一点。</h3><p>频谱、歌词与播放控制，缩进桌面一角。小窗保持置顶，主窗口可以自然退到后台。</p><span class="preview-tag">界面预览 · 原创演示文字</span></figcaption>
         </figure>
       </div>
-      <noscript><style>.preview-panel[hidden]{display:grid}.preview-tabs{display:none}.preview-panel{margin-bottom:24px}</style><p class="small-note">JavaScript 未启用，全部界面预览依次展示。</p></noscript>
+      <noscript><style>.preview-panel[hidden]{display:grid!important}.preview-tabs{display:none}.preview-panel{margin-bottom:24px}</style><p class="small-note">JavaScript 未启用，全部界面预览依次展示。</p></noscript>
       <p class="section-footnote">预览来自软件真实界面；歌曲名及歌词为原创演示内容，不代表正在识别或播放的歌曲。</p>
     </section>
 
@@ -82,16 +95,30 @@
       </div>
     </section>
 
+    <section id="listening-flow" class="listening-flow section-shell section-space" aria-labelledby="flow-title">
+  <div class="section-heading">
+    <div><p class="eyebrow">FROM SOUND TO WORDS</p><h2 id="flow-title">从听见，<br>到看懂这一句。</h2></div>
+    <p class="section-description">识曲与字幕，同时出发。<br>找到可靠歌词，就自然接上。</p>
+  </div>
+  <ol class="flow-steps">
+    <li><span class="flow-index">01 / LISTEN</span><h3>选择声音</h3><p>勾选正在播放的浏览器或音乐软件，也可以选择系统音频。继续用你熟悉的软件听歌、看视频。</p><span class="flow-tag">由你选择监听来源</span></li>
+    <li><span class="flow-index">02 / RECOGNIZE</span><h3>寻找歌曲身份</h3><p>优先利用可信的歌名与歌手信息，再结合本地缓存、参考指纹和可选在线查询。没有标题，也会继续听音寻找线索。</p><span class="flow-tag">看线索，也听声音</span></li>
+    <li><span class="flow-index">03 / TRANSCRIBE</span><h3>字幕同步准备</h3><p>本机听写与识曲并行。还没有找到可靠歌词时，让实时字幕先补位；复杂演唱、对白或强伴奏可能影响准确率。</p><span class="flow-tag">不必等识曲结束</span></li>
+    <li><span class="flow-index">04 / FOLLOW</span><h3>让歌词接上音乐</h3><p>身份与版本匹配后自动寻找歌词，优先使用带时间轴的版本。可靠歌词接入统一显示；无法可靠对齐时保留非同步文字或字幕。</p><span class="flow-tag">一处显示，自然切换</span></li>
+  </ol>
+  <p class="section-footnote">这是软件的处理流程说明。识曲覆盖受参考曲库、录音版本与音质影响，不代表任意声音都能找到准确歌词；本机字幕也可能出现转录错误。</p>
+</section>
+
     <section class="local-core section-shell section-space" aria-labelledby="core-title">
       <div class="core-heading"><p class="eyebrow">03 / LIM CORE</p><span class="core-chip"><i class="status-dot" aria-hidden="true"></i> LOCAL FIRST</span></div>
       <div class="core-grid"><div><h2 id="core-title">本机思考。<br><span>自然响应。</span></h2><p class="core-intro">字幕、翻译与音乐助手，<br>由你电脑里的模型协同完成。</p></div><div class="core-detail"><p>专用模型负责听写，语言模型负责理解与整理。LIM CORE 按任务调度本机推理，让聆听与后台处理各就其位。</p><dl><div><dt>音频 → 文字</dt><dd>本机转录与字幕</dd></div><div><dt>文字 → 理解</dt><dd>8B 助手、翻译与资料整理</dd></div><div><dt>歌曲 → 线索</dt><dd>本地指纹、缓存与在线资料</dd></div></dl><p class="core-disclosure">神经网络推理在本机完成。歌词与资料查询需要网络；在线指纹查询可选，具体数据使用可在软件中设置。</p></div></div>
-      <div class="core-ribbon" aria-hidden="true"><span>AUDIO CAPTURE</span><b>→</b><span>LOCAL INFERENCE</span><b>→</b><span>LYRICS IN MOTION</span></div>
+      <div class="core-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="core-ribbon" aria-hidden="true"><span>AUDIO CAPTURE</span><b>→</b><span>LOCAL INFERENCE</span><b>→</b><span>LYRICS IN MOTION</span></div>
     </section>
 
     <section id="download" class="download-section section-space" aria-labelledby="download-title">
       <div class="section-shell">
         <div class="download-heading"><div><p class="eyebrow">04 / GET RESONANCE</p><h2 id="download-title">共振，<br>从这里开始。</h2></div><div class="release-stamp"><strong>2.2.5</strong><span>PRISM / 棱镜</span><span class="beta-label">内测版 · r5 来源与启动修复</span></div></div>
-        <div class="download-layout">
+        <div class="download-assurance"><span>01 / 官方文件</span><span>02 / SHA-256 校验</span><span>03 / 模型与功能完整保留</span></div><div class="download-layout">
           <div class="download-main"><p class="download-kicker">WINDOWS x64 · 小型联网安装器</p><div class="download-size"><span id="download-size-value">292.6</span> <span>MB</span></div><p id="installer-size-note" class="download-meta">安装器文件 · 292,553,624 字节 · 内含两项修复</p><p class="download-description">一个安装器，内含启动与音频来源修复。<br>首次完整下载仍约 <strong>28.24 GB</strong>，全部功能与模型保留。</p><p class="download-meta">提供下载进度、暂停 / 续传与 SHA-256 校验；已有正确模型由后续安装向导复用。</p><div id="download-actions"><button class="button button-dark download-button" type="button" disabled aria-describedby="download-status">下载 Windows 安装器 <span aria-hidden="true">↓</span></button><noscript><style>#download-actions>button{display:none}</style><a class="button button-dark download-button" href="https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup-r5.exe" download="RESONANCE-2.2.5-Setup-r5.exe">直接下载 Windows 安装器 <span aria-hidden="true">↓</span></a></noscript></div><p id="download-status" class="download-status" role="status">直接下载 EXE，内含启动与音频来源修复。首次安装仍下载约 28.24 GB 完整数据；已安装 2.2.5 可仅更新程序，无需重下模型。中国大陆网络尚未验证。</p><p class="download-requirement">已有完整 2.2.5：先完全退出共振，再选择“仅更新已安装程序”，无需重新下载模型。首次安装需要联网；推荐 Windows 11 x64，缺少 VC++ 运行库时需获取微软官方组件。</p></div>
           <div class="install-options"><p class="option-label">同一套内容，两种安装选择</p><article class="install-option"><div class="option-heading"><h3>最新版本</h3><span>推荐</span></div><p class="install-size">31.11 GB <span>基础占用</span></p><p>当前版本 + 全部功能与模型。<strong>选择最新版本不影响正常使用。</strong></p></article><article class="install-option"><div class="option-heading"><h3>全版本</h3><span class="option-neutral">历史体验</span></div><p class="install-size">32.78 GB <span>基础占用</span></p><p>保留基础包中的 14 个历史版本，以及更新前的版本条目，方便切换和体验此前的设计。</p></article><p class="options-note">31.11 / 32.78 GB 为基础包占用；本次修复约新增 0.23 GB 程序对象，备份与临时空间另计。首次安装另需约 28.24 GB 下载缓存。选择最新版本不影响正常使用。</p></div>
         </div>
@@ -114,18 +141,19 @@
     </section>
 
     <section id="faq" class="faq section-shell section-space" aria-labelledby="faq-title">
-      <div class="faq-heading"><p class="eyebrow">07 / GOOD QUESTIONS</p><h2 id="faq-title">开始前，<br>你可能想知道。</h2></div>
-      <div class="faq-list">
-        <details><summary>共振是一个音乐播放器吗？<span aria-hidden="true">+</span></summary><p>共振主要读取、分析正在播放的声音，并展示频谱、歌词和歌曲信息。你可以继续使用原来的音乐软件或浏览器。播放、暂停和切歌等控制取决于音频来源是否支持；不支持的控制会禁用。</p></details>
-        <details><summary>没有网络，还能用吗？<span aria-hidden="true">+</span></summary><p>本机模型、音频监听、频谱、录制以及已有的本地歌词和识别缓存可以离线使用。查询新的在线歌词、歌曲资料或使用可选在线指纹服务，需要网络。本地识曲的覆盖范围取决于已经导入的参考曲库与缓存。</p></details>
-        <details><summary>任何视频、演唱会都能找到准确歌词吗？<span aria-hidden="true">+</span></summary><p>软件会结合可用的标题、歌手信息与音频识别尝试寻找歌词，但无法保证所有歌曲和录音版本都能匹配。现场演唱、混音、对白和强伴奏会增加难度。没有可靠歌词时，本机字幕可继续显示；复杂演唱的转录仍可能出错。</p></details>
-        <details><summary>必须要 NVIDIA 显卡吗？<span aria-hidden="true">+</span></summary><p>支持的 GPU 可以加速部分本机推理，也提供 CPU 回退。不同模型对内存、显存和处理器的要求不同，CPU 模式可能明显更慢。目前尚未完成所有硬件组合的最低配置验证。建议使用 Windows 11 x64，并按电脑性能选择模型。</p></details>
-        <details><summary>能在 Windows 10 上安装吗？<span aria-hidden="true">+</span></summary><p>安装范围包含 Windows 10 2004 及以上的 x64 系统，但这不代表全部功能已在所有版本完成适配。按应用捕获音频需要系统构建号 20348 或更新；较旧系统可尝试系统音频捕获。推荐 Windows 11 x64。</p></details>
-        <details><summary>为什么安装器 292.6 MB，首次还要下载 28 GB？<span aria-hidden="true">+</span></summary><p>r5 安装器内嵌启动和音频来源修复，所以比原安装器大。全部模型与基础数据仍约 28.24 GB，首次安装需要下载；已有完整 2.2.5 可选择“仅更新已安装程序”，无需重下模型。基础最新 / 全版本占用约 31.11 / 32.78 GB，修复约新增 0.23 GB 程序对象，备份及临时空间另计。它仍不是完整离线包，也没有删减功能。</p></details>
-        <details><summary>内测代码和专属外观，之后还能用吗？<span aria-hidden="true">+</span></summary><p>当前内测版提供内测代码，用于后续版本导入内测资格及相关专属外观。请在软件中备份代码，并在升级或更换电脑时妥善保管。星轨背景与手写风歌词属于内测专属体验。</p></details>
-      </div>
-    </section>
+  <div class="faq-heading"><p class="eyebrow">A FEW THINGS TO KNOW</p><h2 id="faq-title">第一次见面，<br>把问题说清楚。</h2><p>关于安装、声音和本机 AI，<br>你可能想先了解这些。</p></div>
+  <div class="faq-list">
+    <details><summary>安装器只有 292.6 MB，为什么还要下载 28 GB？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>292.6 MB 是联网安装器，内含 r5 的启动与音频来源修复。首次安装还会下载约 28.24 GB 的完整基础数据，包括本机模型；全部当前功能保留，它不是完整离线包。</p><p>请同时预留下载缓存和安装空间。缓存可放到另一个磁盘；基础安装之外还需要更新、备份及临时空间。已安装完整 2.2.5 的用户可只更新程序。</p></div></details>
+    <details><summary>“最新版本”和“全版本”，该选哪一个？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>一般选择<strong>最新版本</strong>：保留全部当前功能和模型，基础占用约 31.11 GB，不影响正常使用。全版本基础占用约 32.78 GB，额外保留基础包中的历史版本，适合想体验旧设计的用户。</p><p>这两个数字都是基础占用。本次修复约新增 0.23 GB 程序对象，恢复备份、缓存和临时文件另计。</p></div></details>
+    <details><summary>我已经装了 2.2.5，需要重新下载模型吗？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>不需要。先从软件或托盘中完全退出共振，再运行最新安装器，选择<strong>“仅更新已安装程序”</strong>。r5 的两项修复已经放进安装器，不会重新下载约 28 GB 基础数据。</p><p>更新会校验原文件，并保留原有模型、历史版本、API 密钥、内测资格、录音与设置。建议另外备份自己的内测代码。</p></div></details>
+    <details><summary>Edge 或播放器没有歌名，还能识别吗？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>先在来源设置中勾选该浏览器或播放器，或者选择系统音频；仅勾选其他软件时，不会自动监听 Edge。来源列表会自动刷新。</p><p>没有歌名不代表没有声音。软件仍会尝试音频识曲和本机字幕，但识曲覆盖取决于参考曲库与缓存。现场版、混音、对白和强伴奏会增加难度；来源不支持的进度或切歌控制会禁用。</p></div></details>
+    <details><summary>本机 AI 会上传音频吗？断网还能做什么？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>神经网络推理在电脑本机完成。本机听写、音频监听、频谱、录制，以及已有的本地歌词和识别缓存可以离线使用。</p><p>新的在线歌词和歌曲资料需要网络。可选在线指纹查询会发送指纹及查询信息，不等于上传原始录音；可在软件中关闭。仅使用本地识曲时，覆盖范围受已经导入的参考曲库限制。</p></div></details>
+    <details><summary>支持什么系统？没有 NVIDIA 显卡也能用吗？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>推荐 <strong>Windows 11 x64</strong>。安装允许 Windows 10 2004 及以上的 x64 系统，但按应用监听需要构建号 20348 或更新；较旧系统可尝试系统音频。受保护、独占或绕过系统混音的音源可能无法捕获。</p><p>支持的 GPU 可以加速部分本机推理，也提供 CPU 回退。CPU 模式可能明显更慢，各模型所需内存和显存不同；目前尚未完成所有硬件组合的最低配置验证。</p></div></details>
+    <details><summary>内测代码有什么用？换电脑之前要做什么？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>当前内测版提供内测代码，用于后续版本导入内测资格及相关专属外观，包括星轨背景与手写风歌词。</p><p>请在软件中单独备份代码，换电脑或清理用户数据前妥善保管。正常更新会保留原有资格；安装包不会包含作者或其他用户的密钥、代码与个人资料。</p></div></details>
+    <details><summary>中国大陆能打开官网吗？下载慢怎么办？<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>官网和安装文件由 GitHub 托管。中国大陆不同地区、运营商的实际可用性与速度尚未验证，不能保证稳定访问；网页能打开也不代表安装文件的下载服务器一定可达。</p><p>安装器支持进度显示、暂停与续传。已有完整 2.2.5 时优先选择“仅更新已安装程序”，避免重复下载模型。请使用本页正式下载入口，并核对文件名与 SHA-256。</p></div></details>
+  </div>
+</section>
   </main>
-  <footer class="site-footer section-shell"><div class="footer-main"><a class="brand" href="#" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">R<span>/</span></span><span>RESONANCE<span class="brand-cn">共振</span></span></a><p>听见的，值得看见。</p><a class="back-top" href="#">回到顶部 ↑</a></div><div class="footer-bottom"><span>RESONANCE 2.2.5 · PRISM / 棱镜 · 内测版</span><span>本机推理 · 自由聆听</span><span>本页无广告、无第三方追踪脚本</span></div></footer>
+  <footer class="site-footer section-shell"><div class="footer-main"><a class="brand" href="#" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">R<span>/</span></span><span>RESONANCE<span class="brand-cn">共振</span></span></a><p>听见的，值得看见。</p><a class="back-top" href="#">回到顶部 ↑</a></div><div class="footer-bottom"><span>RESONANCE 2.2.5 · PRISM / 棱镜 · 内测版</span><span>本机推理 · 自由聆听</span><a href="#faq">常见问题 ↗</a><span>本页无广告、无第三方追踪脚本</span></div></footer>
 </body>
 </html>
