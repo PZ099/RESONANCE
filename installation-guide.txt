@@ -1,5 +1,16 @@
 RESONANCE · PRISM 2.2.5 内测版
 
+推荐入口：小型联网安装器（71.7 MB，完整内容自动下载）
+文件名：RESONANCE-2.2.5-Setup.exe，大小 71,697,703 字节（71.7 MB）。
+联网安装器 SHA-256：95D60B7C635044AEDFFC9762519F31DA0168FC251A40647B67BDEC1892DEB9B4
+官网：https://pz099.github.io/RESONANCE/
+EXE 直链：https://github.com/PZ099/RESONANCE/releases/download/v2.2.5/RESONANCE-2.2.5-Setup.exe
+官网按钮直接下载 EXE，不先打开外部说明页面。
+运行后自动下载约 28.24 GB（28,239,346,608 字节）完整安装数据，保留全部功能与本机模型。
+下载过程中可查看进度、暂停 / 续传与校验；完成后进入原来的安装向导，在“最新版本”和“全版本”中选择。已有正确模型可由该向导复用。
+这是联网安装器，不是 71.7 MB 的完整离线软件；安装期间必须能够访问下载服务器。中国大陆访问速度和可用性尚未验证。
+
+高级方式：完整离线分卷
 这是 Windows 正式安装程序，包含全部本地模型。可通过分卷安装文件或原始完整 ZIP 分发。
 
 分卷发布（如 GitHub Releases）：
@@ -8,7 +19,7 @@ RESONANCE · PRISM 2.2.5 内测版
 GitHub 自动生成的 Source code (zip) / Source code (tar.gz) 是发布仓库源码，不是软件安装包。
 如果下载的是原始「RESONANCE-2.2.5-完整安装包.zip」，先完整解压。该 ZIP 的 SHA-256 只适用于 ZIP 本身，不适用于任何分卷。
 
-安装：
+离线分卷安装步骤：
 1. 下载齐分卷文件；若下载的是完整 ZIP，则先完整解压。安装 EXE 和全部 15 个 BIN 分卷必须留在同一个文件夹。
 2. 运行 RESONANCE-2.2.5-Offline.exe，不要直接在压缩包中运行。
 3. 在向导中选择：

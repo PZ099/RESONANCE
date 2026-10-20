@@ -53,57 +53,71 @@
   }
 
   const release = window.RESONANCE_RELEASE;
+  const validHash = (value) => typeof value === 'string' && /^[a-f0-9]{64}$/i.test(value);
   if (release) {
-    if (typeof release.filename === 'string') document.getElementById('release-filename').textContent = release.filename;
-    if (Number.isSafeInteger(release.sizeBytes) && release.sizeBytes > 0) document.getElementById('release-bytes').textContent = release.sizeBytes.toLocaleString('en-US');
-    if (/^[a-f0-9]{64}$/i.test(release.sha256 || '')) document.getElementById('release-hash').textContent = release.sha256;
-    const mirrors = (Array.isArray(release.mirrors) ? release.mirrors : []).filter((mirror) => {
-      try {
-        const url = new URL(mirror.url);
-        return url.protocol === 'https:' && !url.username && !url.password && typeof mirror.name === 'string' && mirror.name.trim();
-      } catch { return false; }
-    });
-    if (mirrors.length) {
+    const archive = release.archive || {};
+    if (typeof archive.filename === 'string') document.getElementById('release-filename').textContent = archive.filename;
+    if (Number.isSafeInteger(archive.sizeBytes) && archive.sizeBytes > 0) document.getElementById('release-bytes').textContent = archive.sizeBytes.toLocaleString('en-US');
+    if (validHash(archive.sha256)) document.getElementById('release-hash').textContent = archive.sha256;
+
+    const installer = release.onlineInstaller || {};
+    let directUrl = null;
+    try {
+      const candidate = new URL(installer.url);
+      if (candidate.protocol === 'https:' && !candidate.username && !candidate.password &&
+          decodeURIComponent(candidate.pathname.split('/').pop()) === 'RESONANCE-2.2.5-Setup.exe') directUrl = candidate;
+    } catch { /* Missing or invalid final file URL: keep the download disabled. */ }
+
+    // A final URL alone must not enable a partially verified or placeholder release.
+    const ready = directUrl && Number.isSafeInteger(installer.sizeBytes) && installer.sizeBytes > 0 && validHash(installer.sha256);
+    if (ready) {
+      document.getElementById('download-size-value').textContent = (installer.sizeBytes / 1000000).toFixed(1);
+      document.getElementById('installer-size-note').textContent = '安装器文件 · ' + installer.sizeBytes.toLocaleString('en-US') + ' 字节';
+      document.getElementById('installer-bytes').textContent = installer.sizeBytes.toLocaleString('en-US') + ' 字节';
+      document.getElementById('installer-hash').textContent = installer.sha256.toUpperCase();
+      document.getElementById('copy-installer-hash').disabled = false;
       const actions = document.getElementById('download-actions');
       actions.replaceChildren();
-      mirrors.forEach((mirror, index) => {
-        const link = document.createElement('a');
-        link.className = 'button button-dark download-button' + (index ? ' download-mirror' : '');
-        link.href = mirror.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.append(document.createTextNode(mirror.name.trim()));
-        const icon = document.createElement('span');
-        icon.setAttribute('aria-hidden', 'true');
-        icon.textContent = '↗';
-        link.append(icon);
-        actions.append(link);
-        if (typeof mirror.note === 'string' && mirror.note.trim()) {
-          const note = document.createElement('p');
-          note.className = 'mirror-note';
-          note.textContent = mirror.note;
-          actions.append(note);
-        }
-      });
-      document.getElementById('download-status').textContent = '下载页面将在新标签页打开。分卷发布请下载 EXE 与全部 15 个 BIN，放在同一文件夹；完整 ZIP 请先解压。GitHub 的 Source code 不是安装包。';
+      const link = document.createElement('a');
+      link.className = 'button button-dark download-button';
+      link.href = directUrl.href;
+      link.download = 'RESONANCE-2.2.5-Setup.exe';
+      // No window.open or target=_blank: request the EXE directly in the current browsing context.
+      // Cross-origin download behavior is ultimately controlled by the server response headers.
+      link.setAttribute('aria-describedby', 'download-status');
+      link.append(document.createTextNode('下载 Windows 安装器'));
+      const icon = document.createElement('span');
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = '↓';
+      link.append(icon);
+      actions.append(link);
+      document.getElementById('download-status').textContent = '点击直接下载 EXE。运行后自动下载约 28.24 GB 完整安装数据，再进入安装向导；中国大陆访问速度与可用性尚未验证。';
     }
   }
 
-  const copyButton = document.getElementById('copy-hash');
-  copyButton.addEventListener('click', async () => {
-    const value = document.getElementById('release-hash').textContent.trim();
-    const status = document.getElementById('copy-status');
-    try {
-      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
-      await navigator.clipboard.writeText(value);
-      status.textContent = '完整 ZIP 的校验值已复制；分卷请使用 SHA256SUMS.txt。';
-    } catch {
-      const range = document.createRange();
-      range.selectNodeContents(document.getElementById('release-hash'));
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      status.textContent = '已选中完整 ZIP 的校验值，请按 Ctrl+C 或长按复制。分卷请使用 SHA256SUMS.txt。';
-    }
-  });
+  function wireHashCopy(buttonId, valueId, statusId, label) {
+    document.getElementById(buttonId).addEventListener('click', async () => {
+      const valueNode = document.getElementById(valueId);
+      const value = valueNode.textContent.trim();
+      const status = document.getElementById(statusId);
+      if (!validHash(value)) {
+        status.textContent = '最终校验值尚未发布。';
+        return;
+      }
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(value);
+        status.textContent = label + '的校验值已复制。';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(valueNode);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.textContent = '已选中' + label + '的校验值，请按 Ctrl+C 或长按复制。';
+      }
+    });
+  }
+  wireHashCopy('copy-installer-hash', 'installer-hash', 'installer-copy-status', '联网安装器 EXE');
+  wireHashCopy('copy-hash', 'release-hash', 'copy-status', '原始完整 ZIP');
 })();
