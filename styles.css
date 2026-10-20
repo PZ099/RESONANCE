@@ -14,3 +14,10 @@
 
 .guide-links{display:flex;gap:28px;margin-top:22px;padding-left:37px}.guide-links a{font-size:11px;color:var(--lime);border-bottom:1px solid #6a80583b;padding-bottom:6px}.guide-links span{margin-left:12px}.guide-links a:hover{color:var(--text)}
 .download-meta{font-size:11px;line-height:1.8;color:#657159;margin-top:10px}.download-size #download-size-value{font:inherit;letter-spacing:inherit}.hash-row button:disabled{opacity:.6;cursor:not-allowed}.checksum a{text-decoration:underline;text-underline-offset:3px}
+
+/* Signal: the approved five-line mark; the R/ signature remains secondary. */
+.brand-mark{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;line-height:0;letter-spacing:normal;color:var(--lime)}
+.brand-mark svg{display:block;width:44px;height:44px;overflow:visible}
+.brand-wordmark{white-space:nowrap}
+.brand-signature{display:inline-block;font-family:var(--font);font-size:.8em;font-weight:400;letter-spacing:.03em;color:var(--muted);margin-right:.65em}
+@media(max-width:800px){.brand-mark{flex-basis:38px;width:38px;height:38px}.brand-mark svg{width:38px;height:38px}}
